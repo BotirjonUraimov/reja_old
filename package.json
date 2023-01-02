@@ -4,6 +4,7 @@
   "description": "Its our first project",
   "main": "server.js",
   "scripts": {
+    "train": "nodemon train.js",
     "dev": "nodemon server.js",
     "stratr": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +15,10 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.2.0",
+    "jquery": "^3.6.3",
+    "popper.js": "^1.16.1"
   }
 }
