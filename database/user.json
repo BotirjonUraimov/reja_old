@@ -1,0 +1,20 @@
+{
+    "name": "Botir",
+    "profession": "Software Engineer",
+    "age": 20,
+    "residence": "S.Korea",
+    "adress": "S.Korea, Daegu",
+    "language": ["Uzbek", "Korean", "English"],
+    "skills": ["HTML", "CSS", "JS", "NodeJS", "ReactJS"],
+    "extra_skills": ["Bootsrap", "Materialize", "Styling, Sass", "Django", "Flask","GIT knowlage"],
+    "work_place": "IT group",
+    "service_desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quos",
+    "about_me": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quos nostrum earum itaque commodi dolores aliquam voluptas quod animi incidunt!",
+    "city": "Sabr",
+    "title": ["Flower", "Seedling", "Garden", "Old", "New"],
+    "flower_desc": ["What is a Flower?", "What is a Seedling?", "What is a Garden?"],
+    "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "Blossom"],
+    "flower_price": ["15$","25$","12$","20$","35$","30$","22$","19$","9$"],
+    "famous_words": ["World is Beautiful with Flowers"],
+    "famous_name": ["Steve Jobs"]
+    }
