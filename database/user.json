@@ -1,9 +1,9 @@
 {
-    "name": "Botir",
+    "name": "BOTIR",
     "profession": "Software Engineer",
-    "age": 20,
+    "age": 29,
     "residence": "S.Korea",
-    "adress": "S.Korea, Daegu",
+    "address": "S.Korea, Daegu",
     "language": ["Uzbek", "Korean", "English"],
     "skills": ["HTML", "CSS", "JS", "NodeJS", "ReactJS"],
     "extra_skills": ["Bootsrap", "Materialize", "Styling, Sass", "Django", "Flask","GIT knowlage"],
