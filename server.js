@@ -27,10 +27,17 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //routing code 
+app.post("/create-item", function (req, res) {
+    console.log(req.body);
+    res.json({test: "success"})
+});
 
+app.get("/", function (req, res) {
+    res.render("harid");
+});
 
 app.get("/portfolio", function (req, res) {
-    res.render( "project", {user: user} );
+    res.render("project", {user: user} );
 });
 
 //app.get("/gift", function (req, res) {
