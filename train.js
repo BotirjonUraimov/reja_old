@@ -111,6 +111,7 @@ console.log("train task ishga tushdi");
 
 //         }
 // }
+
 // console.log("passed here 0");
 // getAdvice(37, (err, data) => {
 //         if(err) console.log('ERROR:', err);
@@ -219,20 +220,42 @@ console.log("train task ishga tushdi");
 
 // ************** Challenge 2 *****************
 
-let price = [2, 1, 5, 30, 1, 3, 10];
+// let price = [2, 10000, 1, 3000000, 30, 3, 30];
 
-stockBuyAndSell(price);
+// stockBuyAndSell(price);
 
-function stockBuyAndSell(price) {
-  let n = price.length;
-  let i = 0;
-  while (i < n - 1 && price[i + 1] <= price[i]) i++;
-  let index = i++;
-  while (i < n && price[i] >= price[i - 1]) i++;
-  let profitIndex = i - 1;
-  console.log(
-    `You should buy stock => on index: ${index}, and sell on ${profitIndex} to get max Profit: ${
-      price[profitIndex] - price[index]
-    }`
-  );
+// function stockBuyAndSell(price) {
+//   let n = price.length;
+//   let i = 0;
+//   let maxProfit;
+//   let a = [];
+//   while (i < n - 1) {
+//     while (i < n - 1 && price[i + 1] <= price[i]) i++;
+//     if (i == n - 1) break;
+//     let index = i++;
+//     while (i < n && price[i] >= price[i - 1]) i++;
+//     let profitIndex = i - 1;
+//     a = a.push(price[profitIndex] - price[index]);
+//     console.log(a);
+// console.log(
+//   `You should buy stock => on index: ${index}, and sell on ${profitIndex} to get max Profit: ${
+//     price[profitIndex] - price[index]
+//   }`
+//);
+// }
+//}
+function isGreatestThen100(a, callback) {
+  if (typeof a !== "number") callback("Please, Insert a number", null);
+  else if (a < 100) callback(null, `Son 100dan kichik`);
+  else a >= 100;
+  {
+    callback(null, `Son 100ga ten yoki katta`);
+  }
 }
+
+isGreatestThen100(1, (err, data) => {
+  if (err) console.log("ERROR: ", err);
+  else {
+    console.log("result: ", data);
+  }
+});
