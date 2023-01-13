@@ -30,17 +30,13 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 //routing code
-app.post("/create-item", function (req, res) {
+app.post("/create-item", (req, res) => {
   //console.log(req.body);
   console.log("user intered /create-item");
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("Something wenr wrong");
-    } else {
-      res.end("Successfully added");
-    }
+    //console.log(data.ops);
+    res.json(data.ops[0]);
   });
 });
 
