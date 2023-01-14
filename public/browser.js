@@ -35,3 +35,24 @@ document
         console.log("please try again!");
       });
   });
+
+document.addEventListener("click", function (e) {
+  //console.log(e.target);
+  if (e.target.classList.contains("delete-me")) {
+    if (confirm("Are you sure?")) {
+      axios
+        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+          console.log("Please try again!");
+        });
+    }
+  }
+
+  if (e.target.classList.contains("edit-me")) {
+    alert("Siz edit tugmasini bosdingiz");
+  }
+});
