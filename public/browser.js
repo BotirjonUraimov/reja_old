@@ -24,7 +24,7 @@ document
 
     axios
       .post("/create-item", { reja: createField.value })
-      .them((response) => {
+      .then((response) => {
         document
           .getElementById("item-list")
           .insertAdjacentHTML("beforeend", itemTemplate(response.data));

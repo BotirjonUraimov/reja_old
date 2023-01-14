@@ -244,18 +244,24 @@ console.log("train task ishga tushdi");
 //);
 // }
 //}
-function isGreatestThen100(a, callback) {
-  if (typeof a !== "number") callback("Please, Insert a number", null);
-  else if (a < 100) callback(null, `Son 100dan kichik`);
-  else a >= 100;
-  {
-    callback(null, `Son 100ga ten yoki katta`);
-  }
-}
+// function isGreatestThen100(a, callback) {
+//   if (typeof a !== "number") callback("Please, Insert a number", null);
+//   else if (a < 100) callback(null, `Son 100dan kichik`);
+//   else if (a >= 100) {
+//     callback(null, `Son 100ga ten yoki katta`);
+//   }
+// }
 
-isGreatestThen100(1, (err, data) => {
-  if (err) console.log("ERROR: ", err);
-  else {
-    console.log("result: ", data);
-  }
-});
+// isGreatestThen100(1, (err, data) => {
+//   if (err) console.log("ERROR: ", err);
+//   else {
+//     console.log("result: ", data);
+//   }
+// });
+
+// ************** H-task *****************
+
+function reserveString(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reserveString("MIT-2"));
