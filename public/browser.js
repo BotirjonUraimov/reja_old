@@ -53,6 +53,26 @@ document.addEventListener("click", function (e) {
   }
 
   if (e.target.classList.contains("edit-me")) {
-    alert("Siz edit tugmasini bosdingiz");
+    let userInput = prompt(
+      "input your changing",
+      e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: e.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          e.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Please try again!");
+        });
+    }
   }
 });
