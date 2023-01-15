@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>REJA</title>
+    <link rel="stylesheet" href="/reja.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -13,17 +14,21 @@
     />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   </head>
-  <body style="background-color: #b8bbd1">
-    
+  <style>
+    .cos:focus {
+      box-shadow: 0px 0px 8px #14213d;
+    }
+  </style>
+  <body style="background: url('/bach.jfif') no-repeat; background-size: cover">
     <div class="container">
       <h1
         class="display-4 text-center py-1"
-        style="font-weight: 500; margin-top: 50px"
+        style="font-weight: 500; margin-top: 50px; color: #000000"
       >
         PLANS AND GOALS FOR 2023
       </h1>
 
-      <div class="jumbotron p-3 shadow-sm">
+      <div class="jumbotron p-3 shadow-sm warning">
         <form id="create-form" action="/create-item" method="POST">
           <div class="d-flex align-items-center">
             <input
@@ -31,13 +36,18 @@
               name="reja"
               autofocus
               autocomplate="off"
-              class="form-control mr-3"
+              class="form-control mr-3 cos"
               type="text"
-              style="flex: 1"
+              style="flex: 1; font-weight: 500; font-size: 20px"
             />
             <button
               class="btn btn-primary"
-              style="border-radius: 10px; font-weight: 500; font-size: 20px"
+              style="
+                border-radius: 10px;
+                font-weight: 500;
+                font-size: 20px;
+                background-color: #14213d;
+              "
             >
               Add a new plan
             </button>
@@ -45,12 +55,21 @@
         </form>
       </div>
 
-      <ul id="item-list" class="list-group pb-5">
+      <ul
+        id="item-list"
+        class="list-group pb-5"
+        style="display: flex; gap: 2px"
+      >
         <% items.map(function(item) { %>
         <li
           class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+          style="background-color: #14213d; opacity: 0.8"
         >
-          <span class="item-text"><%=item.reja%></span>
+          <span
+            class="item-text"
+            style="color: #ffffff; font-weight: 500; font-size: 20px"
+            ><%=item.reja%></span
+          >
           <div>
             <button
               data-id="<%=item._id%>"

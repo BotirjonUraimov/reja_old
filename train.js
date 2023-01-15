@@ -261,7 +261,60 @@ console.log("train task ishga tushdi");
 
 // ************** H-task *****************
 
-function reserveString(str) {
-  return str.split("").reverse().join("");
+// function reserveString(str) {
+//   return str.split("").reverse().join("");
+// }
+// console.log(reserveString("MIT-2"));
+
+// ************** Challenge 4 ***************
+
+// const arr = [null, 1, null, 15, null, 54, 3, null, 10, null, null, 1];
+
+// function moveNullskeepOrder(arr) {
+//   let numbers = arr.filter((ele) => {
+//     if (typeof ele == "number") {
+//       return ele;
+//     }
+//   });
+//   let nulls = arr.map((ele) => {
+//     // nullarning qiymatini o'zgartirib olish
+//     if (typeof ele != "number") {
+//       return (ele = 1);
+//     }
+//   });
+//   let cc = nulls.filter((ele) => {
+//     // nullarning sonini aniqlash
+//     if (ele == 1) {
+//       return ele;
+//     }
+//   });
+//   for (i = 0; i < cc.length; i++) {
+//     // nullarning sonicha nullni arrayga push qilish
+//     numbers.push(null);
+//   }
+//   return numbers;
+// }
+// console.log(moveNullskeepOrder(arr));
+
+// // ************** Challenge 5 ***************
+
+// const magazine =
+//   "Lorem kill ipsum dolor sit amet, consectetur adipiscing elit, you sed do eiusmod tempor incididunt ut labore et dolorse magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolors in reprehenderit in voluptate velit esse cillum dolorse eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
+// const note = "dolor kills you";
+
+// function canMurderWrite(words) {
+//   var wordsArray = words.split(" "); // note elementlarini arrayga o'tkazish
+//   return wordsArray.every(function (word) {
+//     //array elementlarini magazineda mavjudligini tekshirish
+//     return magazine.indexOf(word) !== -1;
+//   });
+// }
+// console.log(canMurderWrite(note));
+
+// // ************** I - Task  ***************
+
+let arr = [0, -15, 5, -3, 2, -8, 9, -11];
+function getPositive(arr) {
+  return arr.filter((ele) => ele > 0);
 }
-console.log(reserveString("MIT-2"));
+console.log(getPositive(arr));

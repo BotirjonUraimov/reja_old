@@ -63,6 +63,14 @@ app.post("/edit-item", (req, res) => {
   );
 });
 
+app.post("/delete-all", (req, res) => {
+  if (req.body.delete_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({ state: "All plans removed" });
+    });
+  }
+});
+
 app.get("/", function (req, res) {
   console.log("user intered http://localhost:3000/ ");
   db.collection("plans")

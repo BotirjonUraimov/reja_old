@@ -2,17 +2,29 @@ console.log("bu test");
 
 function itemTemplate(item) {
   return `<li
-  class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
-  <span class="item-text">${item.reja}</span>
-  <div>
-  <button data-id="${item._id}" class="edit-me btn btn-secondary btn-sm mr-1">
-  Edit
-  </button>
-  <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">
-  Delete
-  </button>
-  </div>
-  </li>`;
+          class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+          style="background-color: #14213d; opacity: 0.8"
+        >
+          <span
+            class="item-text"
+            style="color: #ffffff; font-weight: 500; font-size: 20px"
+            >${item.reja}</span
+          >
+          <div>
+            <button
+              data-id="${item._id}"
+              class="edit-me btn btn-secondary btn-sm mr-1"
+            >
+              Edit
+            </button>
+            <button
+              data-id="${item._id}"
+              class="delete-me btn btn-danger btn-sm"
+            >
+              Delete
+            </button>
+          </div>
+        </li>`;
 }
 
 let createField = document.getElementById("create-field");
@@ -75,4 +87,11 @@ document.addEventListener("click", function (e) {
         });
     }
   }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios.post("/delete-all", { delete_all: true }).then((response) => {
+    alert(response.data.state);
+    document.location.reload();
+  });
 });
